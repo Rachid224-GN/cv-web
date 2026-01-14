@@ -1,0 +1,230 @@
+/* =========================
+   Base
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f2f4f7;
+  color: #1f2937;
+}
+
+/* =========================
+   CV container
+========================= */
+.cv {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* =========================
+   Header
+========================= */
+.cv-header {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 22px;
+  background: linear-gradient(135deg, #0b2b40, #114b73);
+  color: #ffffff;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.55);
+}
+
+.header-text {
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.3px;
+}
+
+.title {
+  margin: 6px 0 12px 0;
+  opacity: 0.95;
+}
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.pill:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================
+   Body layout
+========================= */
+.cv-body {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+  padding: 18px;
+}
+
+.left {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.right {
+  padding: 6px 4px;
+}
+
+/* =========================
+   Boxes & typography
+========================= */
+.box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 14px;
+  margin-bottom: 12px;
+}
+
+.left .box {
+  background: #ffffff;
+}
+
+.section-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0b2b40;
+}
+
+.text {
+  margin: 0;
+  line-height: 1.45;
+  color: #374151;
+  font-size: 14.5px;
+}
+
+/* =========================
+   Contact lines
+========================= */
+.line {
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: #374151;
+}
+
+.line i {
+  font-size: 18px;
+  color: #114b73;
+}
+
+a {
+  color: #114b73;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Lists
+========================= */
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: #374151;
+  line-height: 1.55;
+  font-size: 14.5px;
+}
+
+/* =========================
+   Project items
+========================= */
+.item {
+  padding: 10px 0;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.item-title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.item-meta {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.item-meta i {
+  margin-right: 6px;
+}
+
+/* =========================
+   Footer
+========================= */
+.cv-footer {
+  padding: 12px 18px 18px 18px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 860px) {
+  body {
+    padding: 14px;
+  }
+
+  .cv-body {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-links {
+    justify-content: center;
+  }
+}
